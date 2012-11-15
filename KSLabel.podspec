@@ -7,5 +7,6 @@ Pod::Spec.new do |s|
   s.author       = { "Keith Smiley" => "keithbsmiley@gmail.com" }
   s.source       = { :git => "https://github.com/Keithbsmiley/KSLabel.git", :tag => "0.1.0" }
   s.platform     = :osx
+  s.source_files = '*.{h,m}'
   s.requires_arc = true
 end
