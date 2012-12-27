@@ -35,16 +35,27 @@
     
     // Causes the label to fit to the text, shouldn't change significantly
     [self sizeToFit];
-    
+
+    // Set the default cursor
+    [self setCursor:[NSCursor arrowCursor]];
+
     return self;
 }
 
-- (void)mouseUp:(NSEvent *)theEvent {
+- (void)mouseUp:(NSEvent *)theEvent
+{
     // If the notification string is set post the notification on mouseUp
-    if (self.notificationToPost && ![self.notificationToPost isEqualToString:@""]) {
+    if (self.notificationToPost && self.notificationToPost.length > 0)
+    {
         [[NSNotificationCenter defaultCenter] postNotificationName:self.notificationToPost
                                                             object:nil];
     }
+}
+
+- (void)resetCursorRects
+{
+    [super resetCursorRects];
+    [self addCursorRect:[self bounds] cursor:self.cursor];
 }
 
 @end

@@ -11,11 +11,26 @@
 @interface KSLabel : NSTextField
 
 /**
+ The type of cursor you would like to be displayed when the user hovers over the label
+ By default it is set to `arrowCursor`
+ 
+ EX: [myLabel setCursor:[NSCursor pointingHandCursor]];
+ 
+ **/
+@property (nonatomic, strong) NSCursor *cursor;
+
+
+/**
  The name of an `NSNotification` you want the label to post every time it is clicked
  
  EX: [myLabel setNotificationToPost:labelClicked];
+
+ You could also use `setAction` on the label if you don't need to pass a notification
+
+ EX: [myLabel setAction:@selector(someAction)];
  **/
 @property (nonatomic, strong) NSString *notificationToPost;
+
 
 /**
  Init with an attributed string configured how you want the text to be displayed
