@@ -21,6 +21,7 @@ Example:
 	NSAttributedString *as = [[NSAttributedString alloc] initWithString:@"My string" attributes:@{NSFontAttributeName : [NSFont systemFontOfSize:[NSFont systemFontSize]]}];
 	KSLabel *mylabel = [[KSLabel alloc] initWithAttributedString:as inView:titleBarView];
 	[mylabel setNotificationToPost:SomeNotification];
+    [myLabel setNSNotificationToPost:[NSNotification notificationWithName:@"someName" object:someObject userInfo:@{@"someKey" : @"someObject"}]];
 	[myLabel setAction:@selector(doSomething:)];
 	[myLabel setCursor:[NSCursor pointingHandCursor]];
 	[myView addSubview:mylabel];
@@ -31,7 +32,7 @@ Example:
 
 If you're using CocoaPods, which you should be, just add this to your podspec.
 
-	pod 'KSLabel', '~> 0.1.1'
+	pod 'KSLabel', '~> 0.1.2'
 
 -----------
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'KSLabel'
-  s.version      = '0.1.1'
+  s.version      = '0.1.2'
   s.summary      = 'A drop in subclass of NSTextField for programmatically created labels.'
   s.homepage     = 'https://github.com/Keithbsmiley/KSLabel'
   s.license      = 'MIT'

@@ -50,6 +50,10 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:self.notificationToPost
                                                             object:nil];
     }
+    else if (self.NSNotificationToPost)
+    {
+        [[NSNotificationCenter defaultCenter] postNotification:self.NSNotificationToPost];
+    }
 }
 
 - (void)resetCursorRects
